@@ -1,0 +1,11 @@
+<mat-form-field>
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    @for (service of services; track service) {
+      <mat-option [value]="service.name">{{service.name}} - {{service.duration}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+
+<input type="datetime-local" id="datetime" name="datetime" [(ngModel)]="dataAgenda">
+{{dataAgenda}}
